@@ -15,6 +15,10 @@ def main():
 
     print("\nIncome Report\n-------------")
     total = 0
+    print_report(incomes, number_of_months_income, total)
+
+
+def print_report(incomes, number_of_months_income, total):
     for month in range(1, number_of_months_income + 1):
         income = incomes[month - 1]
         total += income
