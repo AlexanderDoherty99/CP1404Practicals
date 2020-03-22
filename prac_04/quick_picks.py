@@ -20,3 +20,4 @@ for quick_pick in range(desired_number_of_picks):
             current_pick_line.append(random_number)
             i += 1
     # print(str(current_pick_line).strip('[]').replace(',', ''))
+    print("{:>2} {:>2} {:>2} {:>2} {:>2} {:>2}".format(*current_pick_line))
