@@ -10,7 +10,7 @@ def main():
     data_arrays = get_data()
     print(data_arrays)
     for data in range(len(data_arrays)):
-        print("{} is taught be {} and has {} students".format(data_arrays[data][0], data_arrays[data][1], data_arrays[data][2]))
+        print("{} is taught be {:<12} and has {:>3} students".format(data_arrays[data][0], data_arrays[data][1], data_arrays[data][2]))
 
 
 def get_data():
