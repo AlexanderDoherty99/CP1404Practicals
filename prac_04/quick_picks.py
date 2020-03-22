@@ -19,4 +19,4 @@ for quick_pick in range(desired_number_of_picks):
         if random_number not in current_pick_line:
             current_pick_line.append(random_number)
             i += 1
-    print(current_pick_line)
+    # print(str(current_pick_line).strip('[]').replace(',', ''))
