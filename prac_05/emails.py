@@ -10,6 +10,7 @@ def main():
         if correct_name_checker[0].upper() == "N"
             user_name = input("Name: ")
         emails_dict[user_name] = email
-
+    for key in emails_dict:
+        print("{} ({})".format(key, emails_dict[key]))
 
 main()
