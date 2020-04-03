@@ -4,12 +4,6 @@ State names in a dictionary
 File needs reformatting
 """
 
-
-def output_formatted_dictionary(dictionary):
-    for item in dictionary:
-        print("{:<3} is {}".format(item, dictionary[item]))
-
-
 def main():
 
     COLOUR_TO_CODE = {"blue1": "0000ff", "brown1": "ff4040", "chocolate": "d2691e", "coral": "ff7f60",
@@ -24,8 +18,6 @@ def main():
         else:
             print("Invalid colour name")
         colour_name = input("Enter colour name: ").lower()
-
-    output_formatted_dictionary(COLOUR_TO_CODE)
 
 
 main()
