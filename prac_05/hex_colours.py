@@ -17,13 +17,13 @@ def main():
                       "gold1": "ffd700", "gray": "bebebe", "green1": "00ff00"}
     print(COLOUR_TO_CODE)
 
-    colour_name = input("Enter short state: ").upper()
+    colour_name = input("Enter colour name: ").lower()
     while colour_name != "":
         if colour_name in COLOUR_TO_CODE:
             print(colour_name, "is", COLOUR_TO_CODE[colour_name])
         else:
-            print("Invalid short state")
-        colour_name = input("Enter short state: ").upper()
+            print("Invalid colour name")
+        colour_name = input("Enter colour name: ").lower()
 
     output_formatted_dictionary(COLOUR_TO_CODE)
 
