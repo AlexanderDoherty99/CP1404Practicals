@@ -4,6 +4,15 @@ State names in a dictionary
 File needs reformatting
 """
 
+
+def remove_string_spaces(text):
+    new_text = ""
+    for character in text:
+        if character != " ":
+            new_text += character
+    return new_text
+
+
 def main():
 
     COLOUR_TO_CODE = {"blue1": "0000ff", "brown1": "ff4040", "chocolate": "d2691e", "coral": "ff7f60",
@@ -11,13 +20,13 @@ def main():
                       "gold1": "ffd700", "gray": "bebebe", "green1": "00ff00"}
     print(COLOUR_TO_CODE)
 
-    colour_name = input("Enter colour name: ").lower()
+    colour_name = remove_string_spaces(input("Enter colour name: ").lower())
     while colour_name != "":
         if colour_name in COLOUR_TO_CODE:
             print(colour_name, "is", COLOUR_TO_CODE[colour_name])
         else:
             print("Invalid colour name")
-        colour_name = input("Enter colour name: ").lower()
+        colour_name = remove_string_spaces(input("Enter colour name: ").lower())
 
 
 main()
