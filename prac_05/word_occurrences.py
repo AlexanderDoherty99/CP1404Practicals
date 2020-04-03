@@ -9,12 +9,16 @@ def create_wordcount_dictionary_from_text(text):
 
 
 def output_dict_keys_and_values_sorted(words_count_dict):
+    for key in sorted(words_count_dict.keys()):
+        print("{:{}} : {}".format(key, longest_key_in_dict(words_count_dict), words_count_dict[key]))
+
+
+def longest_key_in_dict(words_count_dict):
     longest_key = 0
     for key in sorted(words_count_dict.keys()):
         if len(key) > longest_key:
             longest_key = len(key)
-    for key in sorted(words_count_dict.keys()):
-        print("{:{}} : {}".format(key, longest_key, words_count_dict[key]))
+    return longest_key
 
 
 def main():
