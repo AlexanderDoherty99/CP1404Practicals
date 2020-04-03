@@ -1,11 +1,15 @@
 def main():
 
-
-    user_input = "temp"
-    while not user_input == "":
-        user_input = input("Email:")
-        username = user_input.split("@")[0]
+    emails_dict = {}
+    email = "temp"
+    while not email == "":
+        email = input("Email:")
+        username = email.split("@")[0]
         user_name = username.replace(".", " ").title()
-        print("Is your name {}?".format(user_name))
+        correct_name_checker = input("Is your name {}? (Y/n)".format(user_name))
+        if correct_name_checker[0].upper() == "N"
+            user_name = input("Name: ")
+        emails_dict[user_name] = email
+
 
 main()
