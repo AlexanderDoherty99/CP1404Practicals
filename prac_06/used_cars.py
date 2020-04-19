@@ -5,7 +5,7 @@ from prac_06.car import Car
 
 
 def main():
-    limo = Car(100)
+    limo = Car("limo", 100)
     limo.add_fuel(20)
     print(limo.fuel)
     limo.drive(115)
