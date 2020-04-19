@@ -7,7 +7,7 @@ class ProgrammingLanguage:
         self.year = year
 
     def __str__(self):
-        return "{}, {} Typing. Reflection={}, First appeared in {}".format(self.name,
+        return "{}, {} Typing, Reflection={}, First appeared in {}".format(self.name,
                                                                            self.typing,
                                                                            self.reflection,
                                                                            self.year)
