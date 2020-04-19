@@ -2,10 +2,16 @@ class Guitar:
     def __init__(self, name, year, cost):
         if name == None:
             self.name = ""
+        else:
+            self.name = name
         if year == None:
-            self.year = 0
+            self.year =
+        else:
+            self.year = year
         if cost == None:
             self.cost = 0
+        else:
+            self.cost = cost
 
     def __str__(self):
         return "{} ({}) : ${}".format(self.name, self.year, self.cost)
