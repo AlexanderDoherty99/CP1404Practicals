@@ -10,5 +10,9 @@ class SilverServiceTaxi(Taxi):
         self.fanciness = fanciness
         self.price_per_km = Taxi.price_per_km * fanciness
 
+    def __str__(self):
+        return "{} flagfall of ${:.2f}".format(super().__str__(),
+                                        self.flagfall)
+
     def get_fare(self):
         return (self.price_per_km * self.current_fare_distance) + self.flagfall
