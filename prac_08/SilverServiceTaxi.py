@@ -3,6 +3,8 @@ from random import randint
 
 
 class SilverServiceTaxi(Taxi):
+    flagfall = 4.50
+
     def __init__(self, name, fuel, fanciness):
         super().__init__(name, fuel)
         self.fanciness = fanciness
