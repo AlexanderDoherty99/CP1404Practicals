@@ -3,9 +3,11 @@ from prac_08.SilverServiceTaxi import SilverServiceTaxi
 
 def main():
     current_taxi = None
+    total_bill = 0.00
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
     user_active = True
     while user_active:
+        print("Current bill: ${:.2f}".format(total_bill))
         print("Let's drive!\n q)uit, c)hoose taxi, d)rive")
         user_input = input(">>>").upper()
         if user_input == "Q":
@@ -20,6 +22,7 @@ def main():
                 desired_distance = int(input("Drive how far? "))
                 taxis[current_taxi].drive(desired_distance)
                 print("Your {} trip cost you ${}".format(taxis[current_taxi].name, taxis[current_taxi].get_fare()))
+                total_bill += taxis[current_taxi].get_fare()
 
 
 def choose_taxi(taxis):
