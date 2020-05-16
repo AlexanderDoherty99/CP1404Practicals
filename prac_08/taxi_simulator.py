@@ -1,6 +1,7 @@
 from prac_08.taxi import Taxi
 from prac_08.SilverServiceTaxi import SilverServiceTaxi
 
+
 def main():
     current_taxi = None
     total_bill = 0.00
@@ -19,10 +20,7 @@ def main():
             if current_taxi is None:
                 print("No Taxi selected!")
             else:
-                desired_distance = int(input("Drive how far? "))
-                taxis[current_taxi].drive(desired_distance)
-                print("Your {} trip cost you ${}".format(taxis[current_taxi].name, taxis[current_taxi].get_fare()))
-                total_bill += taxis[current_taxi].get_fare()
+                total_bill += drive_taxi(int(input("Drive how far? ")), taxis, current_taxi)
 
 
 def choose_taxi(taxis):
@@ -30,5 +28,11 @@ def choose_taxi(taxis):
     for i in range(len(taxis)):
         print("{} - {}".format(i, taxis[i]))
     return input("Choose taxi: ")
+
+
+def drive_taxi(distance, taxis, current_taxi):
+    taxis[current_taxi].drive(distance)
+    print("Your {} trip cost you ${}".format(taxis[current_taxi].name, taxis[current_taxi].get_fare()))
+    return taxis[current_taxi].get_fare()
 
 main()
