@@ -16,7 +16,7 @@ def main():
 
 
 def choose_taxi(taxis):
-    for i in taxis:
+    for i in range(len(taxis)):
         print("{} - {}".format(i, taxis[i]))
 
 main()
