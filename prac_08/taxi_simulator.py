@@ -10,13 +10,15 @@ def main():
     if user_input == "Q":
         exit()
     elif user_input == "C":
-        choose_taxi(taxis)
+        current_taxi == choose_taxi(taxis)
     elif user_input == "D":
         print("Function not yet available")
 
 
 def choose_taxi(taxis):
+    print("Taxis available:")
     for i in range(len(taxis)):
         print("{} - {}".format(i, taxis[i]))
+    return input("Choose taxi: ")
 
 main()
