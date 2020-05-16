@@ -28,7 +28,7 @@ def get_fixed_filename(filename):
         try:
             if reached_extension:
                 new_name += char.lower()
-            elif char == ".":
+            elif char == "." and filename[i+1].upper() == "T":
                 new_name += char
                 reached_extension = True
             elif char == " ":
