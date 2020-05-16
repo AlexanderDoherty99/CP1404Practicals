@@ -12,8 +12,12 @@ def main():
     elif user_input == "C":
         current_taxi == choose_taxi(taxis)
     elif user_input == "D":
-        print("Function not yet available")
-
+        if current_taxi is None:
+            print("No Taxi selected!")
+        else:
+            desired_distance = input("Drive how far? ")
+            taxis[current_taxi].drive(desired_distance)
+            print("Your {} trip cost you ${}".format(taxis[current_taxi].name, taxis[current_taxi].get_fare()))
 
 def choose_taxi(taxis):
     print("Taxis available:")
