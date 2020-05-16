@@ -11,5 +11,4 @@ def main():
     print("Name: {}, Fuel: {}, Fare: ${}, Price per KM: {}, Total KM: {},".format
           (taxi1.name, taxi1.fuel, taxi1.get_fare(), taxi1.price_per_km, taxi1.current_fare_distance))
 
-
 main()
